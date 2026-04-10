@@ -21,10 +21,15 @@ def cmd_get_key(email: str | None = None) -> None:
     if email:
         payload["email"] = email
 
+    from . import __version__
+
     req = urllib.request.Request(
         _TRIAL_URL,
         data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": f"jpi-guard-python/{__version__}",
+        },
         method="POST",
     )
 
