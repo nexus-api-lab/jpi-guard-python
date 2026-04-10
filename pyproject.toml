@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jpi-guard"
-version = "0.1.1"
+version = "0.1.2"
 description = "Japanese Prompt Injection Guard — API client for jpi-guard (external-content-cleanse)"
 readme = "README.md"
 license = { text = "MIT" }
