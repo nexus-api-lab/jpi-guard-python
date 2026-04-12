@@ -4,29 +4,35 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jpi-guard"
-version = "0.1.2"
-description = "Japanese Prompt Injection Guard — API client for jpi-guard (external-content-cleanse)"
+version = "0.1.3"
+description = "Detect and remove Japanese prompt injection attacks from RAG pipelines and LLM inputs. <50ms, no LLM inference."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "nexus-api-lab" }]
 keywords = [
     "prompt-injection",
-    "llm-security",
     "japanese",
-    "langchain",
+    "llm-security",
+    "rag-security",
     "ai-safety",
+    "langchain",
+    "llm-guardrails",
+    "japanese-nlp",
+    "nlp-security",
+    "generative-ai",
 ]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Security",
-    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 requires-python = ">=3.9"
 dependencies = [
@@ -39,9 +45,11 @@ llamaindex = ["llama-index-core>=0.10.0"]
 all = ["langchain-core>=0.2.0", "llama-index-core>=0.10.0"]
 
 [project.urls]
-Homepage = "https://nexus-api-lab.com"
+Homepage = "https://www.nexus-api-lab.com/jpi-guard.html"
+Documentation = "https://www.nexus-api-lab.com/jpi-guard-api.html"
 Repository = "https://github.com/nexus-api-lab/jpi-guard-python"
-Documentation = "https://nexus-api-lab.com/docs"
+Demo = "https://www.nexus-api-lab.com/jpi-guard-demo.html"
+Changelog = "https://www.nexus-api-lab.com/jpi-guard.html#changelog"
 
 [tool.hatch.build.targets.wheel]
 packages = ["jpi_guard"]
